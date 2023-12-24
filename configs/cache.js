@@ -1,3 +1,4 @@
+require('dotenv').config();
 module.exports = {
   redis: {
     host: process.env.REDIS_HOST,
@@ -7,7 +8,7 @@ module.exports = {
   },
 
   redis_keys: {
-    supply: (process.env.REDIS_PREFIX || "") + ":supply.",
-    ad_unit: (process.env.REDIS_PREFIX || "") + ":ad_unit.",
+    supply: (process.env.REDIS_PREFIX || "adlink") + ":supply.",
+    adunit: (process.env.REDIS_PREFIX || "adlink") + ":adunit.",
   },
 };
