@@ -14,16 +14,16 @@ async function index(req, res) {
     const cacheValue = await redis.get(cacheKey);
     console.log('cacheValue', cacheValue)
     if (!cacheValue) {
-        return res.json(['1']);
+        return res.json([]);
     }
     const adUnitHelper = new AdUnitHelper(cacheValue);
     let adUnit = adUnitHelper.unserialize();
     if (!adUnit) {
-        return res.json(['2']);
+        return res.json([]);
     }
 
     if (!adUnit.line_items) {
-        return res.json(['4']);
+        return res.json([]);
     }
 
     // Filter Line Items
