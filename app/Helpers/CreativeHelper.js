@@ -16,7 +16,7 @@ class CreativeHelper {
   }
 
   toHTML() {
-    return `<!DOCTYPE html><html lang="en"><body>${this._creative.code}</body></html>`;
+    return `<!DOCTYPE html><html lang="en"><body>${this._creative.standard_code}</body></html>`;
   }
 
   toValue() {
