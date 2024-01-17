@@ -16,12 +16,17 @@ class CreativeHelper {
   }
 
   toHTML() {
+    return this._creative.standard_code;
+  }
+
+  toHTMLFrame() {
     return `<!DOCTYPE html><html lang="en"><body>${this._creative.standard_code}</body></html>`;
   }
 
   toValue() {
     return {
       html: this.toHTML(),
+      htmlFrame: this.toHTMLFrame(),
       size: this._creative.size,
       width: this._creative.width,
       height: this._creative.height,
